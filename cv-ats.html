@@ -14,6 +14,9 @@
   .title{font-size:12pt; font-weight:bold; margin:0 0 8px}
   .contact{font-size:10pt; margin:0 0 2px}
   .contact a{color:#000; text-decoration:none}
+  .status{font-size:10pt; margin:2px 0 0}                /* tagline under the title */
+  .ci{font-size:10.5pt; margin:1px 0}                    /* one contact per line */
+  .lbl{display:inline-block; width:74px; font-weight:bold}  /* aligns the values into a column */
   h2{font-size:11.5pt; text-transform:uppercase; letter-spacing:.04em;
      border-bottom:1px solid #000; padding-bottom:2px; margin:18px 0 8px}
   p{margin:0 0 8px}
@@ -27,14 +30,15 @@
   .proj{margin:0 0 8px}
   a{color:#000}
   @media print{
-    body{padding:0; line-height:1.32}                      /* tighter leading, PDF only */
-    @page{margin:12mm}                                     /* a touch more vertical room */
-    h2{margin:13px 0 7px; break-after:avoid; page-break-after:avoid}  /* heading stays with its content */
-    p{margin-bottom:5px; orphans:2; widows:2}
-    ul{margin-bottom:5px}
+    body{padding:0; line-height:1.28}                      /* tighter leading, PDF only */
+    @page{margin:11mm}                                     /* a touch more vertical room */
+    h2{margin:11px 0 6px; break-after:avoid; page-break-after:avoid}  /* heading stays with its content */
+    p{margin-bottom:4px; orphans:2; widows:2}
+    ul{margin-bottom:4px}
     li{margin-bottom:2px}
-    .job-h{margin-top:7px; break-after:avoid; page-break-after:avoid}  /* company stays with its role */
-    .role-h{margin-top:6px}
+    .proj{margin-bottom:5px}
+    .job-h{margin-top:6px; break-after:avoid; page-break-after:avoid}  /* company stays with its role */
+    .role-h{margin-top:5px}
     .role-h,.proj,.job-sub,li{break-inside:avoid; page-break-inside:avoid}  /* never split an entry */
   }
 </style>
@@ -42,8 +46,13 @@
 <body>
   <h1>Oleksii Vyzhykovskyi</h1>
   <p class="title">Senior QA Automation Engineer / SDET</p>
-  <p class="contact"><span style="white-space:nowrap"><b>Email:</b> v.alex88@outlook.com</span> &nbsp;|&nbsp; <span style="white-space:nowrap"><b>Telegram:</b> t.me/vizgik88</span> &nbsp;|&nbsp; <span style="white-space:nowrap"><b>LinkedIn:</b> linkedin.com/in/oleksii-vyzhykovskyi</span></p>
-  <p class="contact"><span style="white-space:nowrap">Ukrainian citizen &middot; EU work-authorized</span> &nbsp;|&nbsp; <span style="white-space:nowrap">Remote &middot; EET (UTC+2)</span> &nbsp;|&nbsp; <span style="white-space:nowrap">Open to AQA / SDET roles (B2B or full-time)</span></p>
+  <p class="status">Ukrainian citizen &middot; EU work-authorized &middot; Remote (EET, UTC+2) &middot; Open to AQA / SDET roles (B2B or full-time)</p>
+
+  <h2>Contact</h2>
+  <p class="ci"><span class="lbl">Email:</span> v.alex88@outlook.com</p>
+  <p class="ci"><span class="lbl">Telegram:</span> t.me/vizgik88</p>
+  <p class="ci"><span class="lbl">LinkedIn:</span> linkedin.com/in/oleksii-vyzhykovskyi</p>
+  <p class="ci"><span class="lbl">Portfolio:</span> oleksii-vyzhykovskyi.github.io</p>
 
   <h2>Summary</h2>
   <p>Senior QA Automation Engineer / SDET with 10+ years building scalable, enterprise test automation frameworks and driving AI-powered test automation with agent-based workflows and Claude Code. Focus: Web UI &amp; API automation frameworks from scratch, custom solutions for fast and stable test execution, CI/CD pipeline design, and AI-driven testing workflows.</p>
