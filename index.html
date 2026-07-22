@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oleksii Vyzhykovskyi — Senior QA Automation Engineer / SDET</title>
 <meta name="description" content="Senior QA Automation Engineer / SDET — 10+ years building scalable test automation frameworks, Playwright/Python, Dockerized browser grids and AI-agent-driven web automation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oleksii-vyzhykovskyi.github.io/">
+<meta property="og:title" content="Oleksii Vyzhykovskyi — Senior QA Automation Engineer / SDET">
+<meta property="og:description" content="10+ years building scalable test automation — Playwright/Python, Dockerized browser grids and AI-agent web automation.">
+<meta property="og:image" content="https://oleksii-vyzhykovskyi.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Oleksii Vyzhykovskyi — Senior QA Automation Engineer / SDET">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oleksii Vyzhykovskyi — Senior QA Automation Engineer / SDET">
+<meta name="twitter:description" content="10+ years building scalable test automation — Playwright/Python, Dockerized browser grids and AI-agent web automation.">
+<meta name="twitter:image" content="https://oleksii-vyzhykovskyi.github.io/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'%3E%3Cpath d='M24 3 42.8 13.5 42.8 34.5 24 45 5.2 34.5 5.2 13.5Z' fill='%23070b16' stroke='%2334e0a1' stroke-width='3'/%3E%3Cpath d='M15.5 24.5 21.5 30.5 33 17.5' stroke='%2334e0a1' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -66,6 +78,27 @@
   .proj-card:hover > * { transform: translateZ(24px); }
   @media (prefers-reduced-motion: reduce) { .shimmer { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } .proj-card, .proj-card > * { transition: none; } }
 
+  /* experience timeline */
+  .tl { position: relative; margin-top: 38px; padding-left: 52px; }
+  .tl-spine { position: absolute; left: 15px; top: 6px; bottom: 6px; width: 2px; border-radius: 2px; background: linear-gradient(180deg,var(--accent),var(--accent2) 55%,rgba(56,189,248,0.14)); transform: scaleY(0); transform-origin: top; }
+  .reveal.in .tl-spine { animation: tlDraw 1s cubic-bezier(.2,.7,.2,1) .1s forwards; }
+  @keyframes tlDraw { to { transform: scaleY(1); } }
+  .tl-entry { position: relative; margin-bottom: 22px; }
+  .reveal.in .tl-entry { opacity: 0; transform: translateY(16px); animation: tlRise .6s cubic-bezier(.2,.7,.2,1) forwards; }
+  .reveal.in .tl-entry:nth-of-type(2) { animation-delay: .34s; }
+  .reveal.in .tl-entry:nth-of-type(3) { animation-delay: .54s; }
+  .reveal.in .tl-entry:nth-of-type(4) { animation-delay: .70s; }
+  @keyframes tlRise { to { opacity: 1; transform: none; } }
+  .tl-dot { position: absolute; left: -44px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); box-shadow: 0 0 0 4px rgba(52,224,161,0.13), 0 0 15px rgba(52,224,161,0.65); }
+  .tl-dot.now::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 2px solid var(--accent); animation: tlPulse 1.9s ease-out infinite; }
+  @keyframes tlPulse { 0% { transform: scale(1); opacity: .75; } 100% { transform: scale(2.4); opacity: 0; } }
+  .tl-dot.small { width: 11px; height: 11px; top: 7px; left: -42px; background: var(--accent2); box-shadow: 0 0 0 3px rgba(56,189,248,0.12), 0 0 12px rgba(56,189,248,0.55); }
+  .tl-date { font-family: 'JetBrains Mono',monospace; font-size: 12.5px; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 9px; }
+  .tl-card { background: linear-gradient(180deg,var(--card),var(--card2)); border: 1px solid var(--border); border-radius: 16px; padding: 22px 26px; transition: border-color .3s, transform .3s; }
+  .tl-card:hover { border-color: rgba(52,224,161,0.4); transform: translateX(3px); }
+  .tl-cap { color: rgba(255,255,255,0.36); font-family: 'JetBrains Mono',monospace; font-size: 12.5px; padding-top: 1px; }
+  @media (prefers-reduced-motion: reduce) { .tl-spine { transform: none; animation: none; } .reveal.in .tl-entry, .tl-entry { opacity: 1; transform: none; animation: none; } .tl-dot.now::after { animation: none; } }
+
   @media (max-width: 760px) {
     nav { flex-wrap: wrap; gap: 10px; row-gap: 8px; padding-left: 18px !important; padding-right: 18px !important; }
     .nav-links { gap: 12px !important; flex-wrap: wrap; justify-content: flex-start; }
@@ -81,7 +114,7 @@
 </head>
 <body>
 <div class="scroll-bar" id="scrollBar"></div>
-<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}.tl-spine{transform:none !important}.tl-entry{opacity:1 !important;transform:none !important}</style></noscript>
 <div style="background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden;">
 
   <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 18px clamp(24px,6vw,90px); background: linear-gradient(90deg, rgba(11,18,32,0.9), rgba(13,24,40,0.85), rgba(11,18,32,0.9)); background-size: 200% 100%; animation: navShimmer 12s ease-in-out infinite; backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); box-shadow: 0 8px 30px -18px rgba(52,224,161,0.4);">
@@ -219,13 +252,14 @@
     <div style="max-width: 1240px; margin: 0 auto;">
       <h2 style="font-family: 'Poppins',sans-serif; font-size: clamp(28px,3.4vw,42px); font-weight: 700; letter-spacing: -1px; margin: 10px 0 16px; color: var(--accent)">Professional Experience</h2>
       <p style="color: var(--muted); font-size: 17px; line-height: 1.7; max-width: 720px;">A decade of quality ownership at a single Gaming Solutions company.</p>
-      <div style="display: flex; flex-direction: column; gap: 22px; margin-top: 38px;">
-        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 30px;">
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline;">
+      <div class="tl">
+        <div class="tl-spine"></div>
+        <div class="tl-entry">
+          <div class="tl-dot now"></div>
+          <div class="tl-date">Mar 2018 – Present</div>
+          <div class="tl-card">
             <h5 style="font-family: 'Poppins',sans-serif; font-size: 20px; font-weight: 600; color: var(--text);">Senior QA Automation Engineer</h5>
-            <span style="color: var(--accent); font-weight: 600; font-size: 14px;">Mar 2018 – Present</span>
-          </div>
-          <p style="color: var(--muted); font-size: 14.5px; margin: 6px 0 18px;">Innovation Group</p>
+            <p style="color: var(--muted); font-size: 14.5px; margin: 4px 0 16px;">Innovation Group</p>
           <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Architected UI &amp; API test automation framework from scratch.</span></div>
           <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Migrated the entire manual regression suite to automation.</span></div>
           <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Modernized the framework with AI agents, integrating Claude Code to generate and maintain tests.</span></div>
@@ -237,13 +271,14 @@
             <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">CI/CD</span>
             <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">AI Agents</span>
           </div>
-        </div>
-        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 30px;">
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline;">
-            <h5 style="font-family: 'Poppins',sans-serif; font-size: 20px; font-weight: 600; color: var(--text);">QA Engineer</h5>
-            <span style="color: var(--accent); font-weight: 600; font-size: 14px;">Apr 2016 – Feb 2018</span>
           </div>
-          <p style="color: var(--muted); font-size: 14.5px; margin: 6px 0 18px;">Innovation Group</p>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Apr 2016 – Feb 2018</div>
+          <div class="tl-card">
+            <h5 style="font-family: 'Poppins',sans-serif; font-size: 20px; font-weight: 600; color: var(--text);">QA Engineer</h5>
+            <p style="color: var(--muted); font-size: 14.5px; margin: 4px 0 16px;">Innovation Group</p>
           <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Ran functional, regression and exploratory testing for gaming web products; authored test cases, managed defects in Jira &amp; TestRail.</span></div>
           <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Initiated automation adoption — first Python/Selenium smoke and regression suites.</span></div>
           <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Verified cross-browser &amp; responsive UI in close Agile/Scrum collaboration with developers.</span></div>
@@ -253,6 +288,12 @@
             <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Regression</span>
             <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Agile</span>
           </div>
+          </div>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-dot small"></div>
+          <div class="tl-date" style="color: var(--accent2);">2016</div>
+          <div class="tl-cap">// career start — quality ownership begins</div>
         </div>
       </div>
     </div>
