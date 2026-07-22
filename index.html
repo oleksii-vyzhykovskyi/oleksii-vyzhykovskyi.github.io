@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oleksii Vyzhykovskyi — Senior QA Automation Engineer / SDET</title>
+<meta name="description" content="Senior QA Automation Engineer / SDET — 10+ years building scalable test automation frameworks, Playwright/Python, Dockerized browser grids and AI-agent-driven web automation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Poppins', system-ui, sans-serif; }
+  :root {
+    --bg: #070b16;
+    --bg2: #0b1120;
+    --card: #111a2e;
+    --card2: #0e1626;
+    --border: rgba(120,150,200,0.14);
+    --text: #e9eef7;
+    --muted: rgba(255,255,255,0.5);
+    --accent: #34e0a1;
+    --accent2: #38bdf8;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent2); }
+  ::selection { background: rgba(52,224,161,0.3); }
+  @keyframes marqL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes marqR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  @keyframes navShimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .logo-track { display: flex; gap: 18px; width: max-content; }
+  .logo-mask:hover .logo-track { animation-play-state: paused; }
+  .logo-chip { flex: none; display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 13px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); }
+  .logo-chip img { width: 26px; height: 26px; }
+  .logo-chip span { font-size: 14px; font-weight: 600; color: var(--text); white-space: nowrap; }
+
+  /* interactive states (compiled from style-hover) */
+  .navlink { color: var(--muted); font-size: 15px; font-weight: 500; }
+  .navlink:hover { color: var(--text); }
+  .nav-cta:hover { background: var(--accent2) !important; color: #041827 !important; }
+  .btn-primary:hover { background: var(--accent2) !important; color: #041827 !important; }
+  .btn-ghost:hover { border-color: var(--accent) !important; color: var(--accent) !important; }
+  .proj-card:hover { border-color: var(--accent) !important; }
+  .contact-ico:hover { background: var(--accent) !important; color: #05231a !important; border-color: var(--accent) !important; }
+
+  @media (max-width: 760px) {
+    nav { flex-wrap: wrap; gap: 10px; row-gap: 8px; padding-left: 18px !important; padding-right: 18px !important; }
+    .nav-links { gap: 12px !important; flex-wrap: wrap; justify-content: flex-start; }
+    .nav-links a { font-size: 13.5px !important; }
+    .hero-grid { grid-template-columns: 1fr !important; }
+    .hero-name { white-space: normal !important; }
+  }
+  @media (max-width: 460px) {
+    .nav-links a[href="#contact"] { padding: 7px 14px !important; }
+    .logo-chip span { font-size: 13px !important; }
+  }
+</style>
+</head>
+<body>
+<div style="background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden;">
+
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 18px clamp(24px,6vw,90px); background: linear-gradient(90deg, rgba(11,18,32,0.9), rgba(13,24,40,0.85), rgba(11,18,32,0.9)); background-size: 200% 100%; animation: navShimmer 12s ease-in-out infinite; backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); box-shadow: 0 8px 30px -18px rgba(52,224,161,0.4);">
+    <a href="#home" style="font-family: 'Poppins',sans-serif; font-weight: 700; font-size: 22px; color: var(--text); letter-spacing: -0.5px;">Oleksii Vyzhykovskyi</a>
+    <div class="nav-links" style="display: flex; gap: clamp(14px,2.4vw,34px); align-items: center;">
+      <a href="#about" class="navlink">About</a>
+      <a href="#skills" class="navlink">Skills</a>
+      <a href="#experience" class="navlink">Experience</a>
+      <a href="#projects" class="navlink">Projects</a>
+      <a href="#contact" class="nav-cta" style="padding: 9px 20px; border-radius: 999px; background: var(--accent); color: #05231a; font-weight: 700; font-size: 14px;">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home" style="position: relative; padding: clamp(56px,9vw,110px) clamp(24px,6vw,90px) clamp(60px,8vw,96px); background: radial-gradient(1200px 600px at 78% -10%, rgba(56,189,248,0.10), transparent 60%), radial-gradient(900px 500px at 8% 15%, rgba(52,224,161,0.09), transparent 55%);">
+    <div class="hero-grid" style="display: grid; grid-template-columns: minmax(0,1.35fr) minmax(0,0.95fr); gap: clamp(30px,5vw,64px); align-items: center; max-width: 1240px; margin: 0 auto;">
+      <div>
+        <h1 style="font-family: 'Poppins',sans-serif; font-weight: 700; font-size: clamp(30px,3.6vw,46px); line-height: 1.08; letter-spacing: -1.5px; margin: 22px 0 14px;"><span class="hero-name" style="white-space: nowrap;">Hi, I'm Oleksii Vyzhykovskyi</span><br><span style="color: var(--accent); background: linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 22px rgba(52,224,161,0.45));">I build test automation<br>that scales</span></h1>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px;">
+          <a href="#contact" class="btn-primary" style="display: inline-flex; align-items: center; gap: 9px; padding: 13px 28px; border-radius: 999px; background: var(--accent); color: #05231a; font-weight: 700; font-size: 15px;">Hire Me<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          <a href="https://www.linkedin.com/in/oleksii-vyzhykovskyi" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text); font-weight: 600; font-size: 15px;">LinkedIn<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
+        </div>
+        <p style="margin-top: 26px; color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 10px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: rgba(52, 224, 161, 0.18) 0px 0px 0px 4px;"></span>Remote · EET (UTC+2) · Ukrainian citizen, EU work-authorized · Open to AQA / SDET roles</p>
+      </div>
+
+      <div style="background: linear-gradient(180deg,#0d1424,#0a111e); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 30px 70px -30px rgba(0,0,0,0.7); padding: 26px 0;">
+        <p style="text-align: center; font-family: 'Poppins',sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 22px; background: linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; display: flex; align-items: center; justify-content: center; gap: 12px;"><span style="width: 26px; height: 1px; background: linear-gradient(90deg,transparent,var(--accent));"></span>My Toolbox<span style="width: 26px; height: 1px; background: linear-gradient(90deg,var(--accent2),transparent);"></span></p>
+        <div class="logo-mask" style="-webkit-mask-image: linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent); mask-image: linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);">
+          <div class="logo-track" style="animation: marqL 26s linear infinite; margin-bottom: 16px;">
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright"><span>Playwright</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium"><span>Selenium</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" alt="Pytest"><span>Pytest</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" alt="RabbitMQ"><span>RabbitMQ</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright"><span>Playwright</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium"><span>Selenium</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" alt="Pytest"><span>Pytest</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" alt="RabbitMQ"><span>RabbitMQ</span></div>
+          </div>
+          <div class="logo-track" style="animation: marqR 30s linear infinite;">
+            <div class="logo-chip"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude Code"><span>Claude Code</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab CI"><span>GitLab CI</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"><span>Jenkins</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"><span>Postman</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira"><span>Jira</span></div>
+            <div class="logo-chip"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude Code"><span>Claude Code</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab CI"><span>GitLab CI</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"><span>Jenkins</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"><span>Postman</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+            <div class="logo-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira"><span>Jira</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding: clamp(56px,7vw,96px) clamp(24px,6vw,90px); background: var(--bg2); border-top: 1px solid var(--border);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <h2 style="font-family: 'Poppins',sans-serif; font-size: clamp(28px,3.4vw,42px); font-weight: 700; letter-spacing: -1px; margin: 10px 0 16px; color: var(--accent)">About Me</h2>
+      <p style="color: var(--muted); font-size: 17px; line-height: 1.75; max-width: 820px; text-wrap: pretty;">I'm a <b style="color: var(--text);">Senior QA Automation Engineer</b> with <b style="color: var(--text);">10+ years</b> building scalable enterprise test automation frameworks and driving AI-powered test automation with agent-based workflows and Claude Code.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 22px; margin-top: 38px;">
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 16px; color: var(--text);">What I Do</h5>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>Web UI &amp; API test automation frameworks from scratch</span></div>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>Build custom solutions for fast and stable test execution</span></div>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>CI/CD pipeline design</span></div>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>Building AI-driven testing workflows and web automation</span></div>
+        </div>
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 16px; color: var(--text);">Strengths</h5>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>Deep ownership — quality built end-to-end over a decade</span></div>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>Custom Dockerized cross-browser Playwright grid for scalable parallel web UI test execution</span></div>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>Strong Python OOP, async &amp; performance/load testing</span></div>
+          <div style="display: flex; gap: 12px; padding: 9px 0; color: var(--muted); font-size: 15px; line-height: 1.5;"><span style="color: var(--accent); font-weight: 800;">→</span><span>Mentoring, code review, test strategy &amp; standards</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="padding: clamp(56px,7vw,96px) clamp(24px,6vw,90px);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <h2 style="font-family: 'Poppins',sans-serif; font-size: clamp(28px,3.4vw,42px); font-weight: 700; letter-spacing: -1px; margin: 10px 0 16px; color: var(--accent)">Technical Skills</h2>
+      <p style="color: var(--muted); font-size: 17px; line-height: 1.7; max-width: 720px;">Core skillset of testing and automation work.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(290px,1fr)); gap: 22px; margin-top: 38px;">
+        <div style="background: linear-gradient(180deg,var(--card),var(--card2)); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 18px; color: var(--text);">Automation &amp; Frameworks</h5>
+          <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Playwright</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Selenium WebDriver</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Selene</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Pytest</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Behave (BDD)</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Page Object Model</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Cross-browser</span>
+          </div>
+        </div>
+        <div style="background: linear-gradient(180deg,var(--card),var(--card2)); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 18px; color: var(--text);">Languages &amp; API</h5>
+          <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Python 3 (OOP, asyncio)</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">REST</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">WebSocket</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">httpx / requests</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">XPath / CSS</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">JSON</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Postman</span>
+          </div>
+        </div>
+        <div style="background: linear-gradient(180deg,var(--card),var(--card2)); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 18px; color: var(--text);">CI/CD, DevOps &amp; Tools</h5>
+          <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Claude Code</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Docker</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">GitLab CI</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Jenkins</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Allure</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Jira</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">RabbitMQ</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">Locust</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">JMeter</span>
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); background: rgba(56,189,248,0.06); color: var(--muted); font-size: 13.5px; font-weight: 500;">AWS S3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="padding: clamp(56px,7vw,96px) clamp(24px,6vw,90px); background: var(--bg2); border-top: 1px solid var(--border);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <h2 style="font-family: 'Poppins',sans-serif; font-size: clamp(28px,3.4vw,42px); font-weight: 700; letter-spacing: -1px; margin: 10px 0 16px; color: var(--accent)">Professional Experience</h2>
+      <p style="color: var(--muted); font-size: 17px; line-height: 1.7; max-width: 720px;">A decade of quality ownership at a single Gaming Solutions company.</p>
+      <div style="display: flex; flex-direction: column; gap: 22px; margin-top: 38px;">
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 30px;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline;">
+            <h5 style="font-family: 'Poppins',sans-serif; font-size: 20px; font-weight: 600; color: var(--text);">Senior QA Automation Engineer</h5>
+            <span style="color: var(--accent); font-weight: 600; font-size: 14px;">Mar 2018 – Present</span>
+          </div>
+          <p style="color: var(--muted); font-size: 14.5px; margin: 6px 0 18px;">Innovation Group</p>
+          <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Architected UI &amp; API test automation framework from scratch.</span></div>
+          <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Migrated the entire manual regression suite to automation.</span></div>
+          <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Modernized the framework with AI agents, integrating Claude Code to generate and maintain tests.</span></div>
+          <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Mentored 7 engineers transitioning from manual QA to automation, led code reviews and defined test strategy.</span></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;">
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Playwright</span>
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Python</span>
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Docker</span>
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">CI/CD</span>
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">AI Agents</span>
+          </div>
+        </div>
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 30px;">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: baseline;">
+            <h5 style="font-family: 'Poppins',sans-serif; font-size: 20px; font-weight: 600; color: var(--text);">QA Engineer</h5>
+            <span style="color: var(--accent); font-weight: 600; font-size: 14px;">Apr 2016 – Feb 2018</span>
+          </div>
+          <p style="color: var(--muted); font-size: 14.5px; margin: 6px 0 18px;">Innovation Group</p>
+          <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Ran functional, regression and exploratory testing for gaming web products; authored test cases, managed defects in Jira &amp; TestRail.</span></div>
+          <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Initiated automation adoption — first Python/Selenium smoke and regression suites.</span></div>
+          <div style="display: flex; gap: 12px; padding: 7px 0; color: var(--muted); font-size: 15px; line-height: 1.55;"><span style="color: var(--accent); margin-top: 2px;">▹</span><span>Verified cross-browser &amp; responsive UI in close Agile/Scrum collaboration with developers.</span></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;">
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Manual Testing</span>
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Selenium</span>
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Regression</span>
+            <span style="padding: 5px 12px; border-radius: 6px; background: rgba(52,224,161,0.1); color: var(--accent); font-size: 12.5px; font-weight: 600;">Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="padding: clamp(56px,7vw,96px) clamp(24px,6vw,90px);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <h2 style="font-family: 'Poppins',sans-serif; font-size: clamp(28px,3.4vw,42px); font-weight: 700; letter-spacing: -1px; margin: 10px 0 16px; color: var(--accent)">Featured Work</h2>
+      <p style="color: var(--muted); font-size: 17px; line-height: 1.7; max-width: 720px;">Automation initiatives and frameworks I designed and shipped.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 22px; margin-top: 38px;">
+        <div class="proj-card" style="display: flex; flex-direction: column; background: linear-gradient(180deg,var(--card),var(--card2)); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 19px; font-weight: 600; margin: 18px 0 10px; color: var(--text);">WEB UI &amp; API Automation Framework</h5>
+          <p style="color: var(--muted); font-size: 14.5px; line-height: 1.6; flex: 1;">Python framework built from scratch. 2,000+ automated tests.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0;">
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">Python</span>
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">Playwright</span>
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">Behave (BDD)</span>
+          </div>
+        </div>
+        <div class="proj-card" style="display: flex; flex-direction: column; background: linear-gradient(180deg,var(--card),var(--card2)); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 19px; font-weight: 600; margin: 18px 0 10px; color: var(--text);">Dockerized Browser Grid</h5>
+          <p style="color: var(--muted); font-size: 14.5px; line-height: 1.6; flex: 1;">Custom Playwright grid running Chrome, Firefox &amp; Opera in isolated Docker containers.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0;">
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">Docker</span>
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">Playwright</span>
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">WebSocket</span>
+          </div>
+        </div>
+        <div class="proj-card" style="display: flex; flex-direction: column; background: linear-gradient(180deg,var(--card),var(--card2)); border: 1px solid var(--border); border-radius: 18px; padding: 28px;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 19px; font-weight: 600; margin: 18px 0 10px; color: var(--text);">AI-Agent Web Automation</h5>
+          <p style="color: var(--muted); font-size: 14.5px; line-height: 1.6; flex: 1;">Migrated web UI automation to an agent-teams model, integrating Claude Code to generate and maintain end-to-end tests.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0;">
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">AI Agents</span>
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">Claude Code</span>
+            <span style="padding: 5px 11px; border-radius: 6px; border: 1px solid var(--border); color: var(--muted); font-size: 12px; font-weight: 500;">MCP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding: clamp(56px,7vw,96px) clamp(24px,6vw,90px); background: var(--bg2); border-top: 1px solid var(--border);">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: clamp(30px,5vw,60px); align-items: center;">
+        <div>
+          <h2 style="font-family: 'Poppins',sans-serif; font-size: clamp(28px,3.4vw,42px); font-weight: 700; letter-spacing: -1px; margin: 10px 0 16px; color: var(--accent)">Let's Build Quality Together</h2>
+          <p style="color: var(--muted); font-size: 17px; line-height: 1.75; max-width: 480px; text-wrap: pretty;">I'm actively open to Senior QA Automation / SDET roles (remote, B2B, full-time). Let's connect.</p>
+        </div>
+        <div style="background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 32px; max-width: 340px; width: 100%; justify-self: center; margin: 0 auto;">
+          <h5 style="font-family: 'Poppins',sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 20px; text-align: center;">Contact Details</h5>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
+            <a href="https://t.me/vizgik88" target="_blank" rel="noopener noreferrer" title="Telegram" class="contact-ico" style="position: relative; width: 52px; height: 52px; border-radius: 13px; background: rgba(52,224,161,0.12); color: var(--accent); display: grid; place-items: center; border: 1px solid var(--border); cursor: pointer;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-1.99 1.93c-.23.23-.42.42-.83.42z"></path></svg></a>
+            <a id="emailLink" href="mailto:v.alex88@outlook.com" title="Email (click to copy)" class="contact-ico" style="position: relative; width: 52px; height: 52px; border-radius: 13px; background: rgba(52,224,161,0.12); color: var(--accent); display: grid; place-items: center; border: 1px solid var(--border); cursor: pointer;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zM4 18V8l8 5 8-5v10H4z"></path></svg></a>
+            <a href="https://www.linkedin.com/in/oleksii-vyzhykovskyi" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="contact-ico" style="position: relative; width: 52px; height: 52px; border-radius: 13px; background: rgba(52,224,161,0.12); color: var(--accent); display: grid; place-items: center; border: 1px solid var(--border); cursor: pointer;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
+          </div>
+          <div id="copiedMsg" style="text-align: center; margin-top: 16px; height: 20px; color: var(--accent); font-size: 14px; font-weight: 600; opacity: 0; transition: opacity 0.3s;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 34px clamp(24px,6vw,90px); border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;">
+    <span style="color: var(--muted); font-size: 14px;">© 2026 Oleksii Vyzhykovskyi — Senior QA Automation Engineer / SDET</span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var emailLink = document.getElementById('emailLink');
+    var msg = document.getElementById('copiedMsg');
+    var timer;
+    function showCopied() {
+      msg.textContent = 'Copied ✓';
+      msg.style.opacity = '1';
+      clearTimeout(timer);
+      timer = setTimeout(function () { msg.style.opacity = '0'; }, 2000);
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { document.execCommand('copy'); showCopied(); } catch (err) {}
+      document.body.removeChild(ta);
+    }
+    if (emailLink) {
+      emailLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        var email = 'v.alex88@outlook.com';
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).then(showCopied).catch(function () { fallbackCopy(email); });
+        } else {
+          fallbackCopy(email);
+        }
+      });
+    }
+  })();
+</script>
+</body>
+</html>
