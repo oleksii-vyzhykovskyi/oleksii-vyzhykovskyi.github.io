@@ -45,6 +45,12 @@
   .proj-card:hover { border-color: var(--accent) !important; }
   .contact-ico:hover { background: var(--accent) !important; color: #05231a !important; border-color: var(--accent) !important; }
 
+  /* hero decode/scramble */
+  .scr { color: var(--accent2); -webkit-text-fill-color: var(--accent2); }
+  .hero-cursor { color: var(--accent); -webkit-text-fill-color: var(--accent); font-weight: 400; animation: heroBlink 1s steps(1) infinite; }
+  @keyframes heroBlink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .hero-cursor { animation: none; } }
+
   @media (max-width: 760px) {
     nav { flex-wrap: wrap; gap: 10px; row-gap: 8px; padding-left: 18px !important; padding-right: 18px !important; }
     .nav-links { gap: 12px !important; flex-wrap: wrap; justify-content: flex-start; }
@@ -75,7 +81,7 @@
   <section id="home" style="position: relative; padding: clamp(56px,9vw,110px) clamp(24px,6vw,90px) clamp(60px,8vw,96px); background: radial-gradient(1200px 600px at 78% -10%, rgba(56,189,248,0.10), transparent 60%), radial-gradient(900px 500px at 8% 15%, rgba(52,224,161,0.09), transparent 55%);">
     <div class="hero-grid" style="display: grid; grid-template-columns: minmax(0,1.35fr) minmax(0,0.95fr); gap: clamp(30px,5vw,64px); align-items: center; max-width: 1240px; margin: 0 auto;">
       <div>
-        <h1 style="font-family: 'Poppins',sans-serif; font-weight: 700; font-size: clamp(30px,3.6vw,46px); line-height: 1.08; letter-spacing: -1.5px; margin: 22px 0 14px;"><span class="hero-name" style="white-space: nowrap;">Hi, I'm Oleksii Vyzhykovskyi</span><br><span style="color: var(--accent); background: linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 22px rgba(52,224,161,0.45));">I build test automation<br>that scales</span></h1>
+        <h1 style="font-family: 'Poppins',sans-serif; font-weight: 700; font-size: clamp(30px,3.6vw,46px); line-height: 1.08; letter-spacing: -1.5px; margin: 22px 0 14px; min-height: 3.2em;"><span id="hero-l1" class="hero-name" style="white-space: nowrap;">Hi, I'm Oleksii Vyzhykovskyi</span><br><span id="hero-l2" style="color: var(--accent); background: linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 22px rgba(52,224,161,0.45));">I build test automation<br>that scales</span></h1>
 
         <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px;">
           <a href="#contact" class="btn-primary" style="display: inline-flex; align-items: center; gap: 9px; padding: 13px 28px; border-radius: 999px; background: var(--accent); color: #05231a; font-weight: 700; font-size: 15px;">Hire Me<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
@@ -329,6 +335,64 @@
         }
       });
     }
+  })();
+</script>
+<script>
+  (function () {
+    function init() {
+      var l1 = document.getElementById('hero-l1');
+      var l2 = document.getElementById('hero-l2');
+      if (!l1 || !l2) return;
+      var CH = '!<>-_\\/[]{}=+*^?#01x();'.split('');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var TARGETS = [
+        { el: l1, lines: ["Hi, I'm Oleksii Vyzhykovskyi"] },
+        { el: l2, lines: ["I build test automation", "that scales"], cursor: true }
+      ];
+      function esc(c) { return c === '<' ? '&lt;' : c === '&' ? '&amp;' : c; }
+      function finalHTML(t) { return t.lines.join('<br>') + (t.cursor ? '<span class="hero-cursor">_</span>' : ''); }
+      function scramble(el, lines, cb) {
+        var q = [];
+        for (var li = 0; li < lines.length; li++) {
+          if (li > 0) q.push({ br: true });
+          for (var i = 0; i < lines[li].length; i++) {
+            var s = Math.floor(Math.random() * 18);
+            q.push({ to: lines[li].charAt(i), start: s, end: s + 10 + Math.floor(Math.random() * 22), ch: null });
+          }
+        }
+        var frame = 0;
+        function upd() {
+          var out = '', done = 0, total = 0;
+          for (var i = 0; i < q.length; i++) {
+            var c = q[i];
+            if (c.br) { out += '<br>'; continue; }
+            total++;
+            if (frame >= c.end) { done++; out += esc(c.to); }
+            else if (frame >= c.start) {
+              if (!c.ch || Math.random() < 0.3) c.ch = CH[Math.floor(Math.random() * CH.length)];
+              out += '<span class="scr">' + esc(c.ch) + '</span>';
+            }
+          }
+          el.innerHTML = out;
+          if (done === total) { if (cb) cb(); return; }
+          frame++; requestAnimationFrame(upd);
+        }
+        upd();
+      }
+      if (reduce) { TARGETS.forEach(function (t) { t.el.innerHTML = finalHTML(t); }); return; }
+      TARGETS.forEach(function (t) { t.el.innerHTML = ''; });
+      var idx = 0;
+      (function step() {
+        if (idx >= TARGETS.length) return;
+        var t = TARGETS[idx];
+        scramble(t.el, t.lines, function () {
+          if (t.cursor) t.el.insertAdjacentHTML('beforeend', '<span class="hero-cursor">_</span>');
+          idx++; setTimeout(step, 110);
+        });
+      })();
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
   })();
 </script>
 </body>
