@@ -71,12 +71,15 @@
   /* scroll reveal */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: none; }
-  /* project tilt */
-  .proj-grid { perspective: 1000px; }
-  .proj-card { transition: transform .3s cubic-bezier(.2,.7,.2,1), border-color .3s; transform-style: preserve-3d; will-change: transform; }
-  .proj-card > * { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
-  .proj-card:hover > * { transform: translateZ(24px); }
-  @media (prefers-reduced-motion: reduce) { .shimmer { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } .proj-card, .proj-card > * { transition: none; } }
+  /* project tilt — layered depth parallax */
+  .proj-grid { perspective: 1100px; }
+  .proj-card { transition: transform .3s cubic-bezier(.2,.7,.2,1), border-color .3s, box-shadow .3s; transform-style: preserve-3d; will-change: transform; }
+  .proj-card:hover { box-shadow: 0 34px 70px -38px rgba(0,0,0,0.85); }
+  .proj-card > * { transition: transform .35s cubic-bezier(.2,.7,.2,1); transform-style: preserve-3d; }
+  .proj-card:hover > h5 { transform: translateZ(52px); }
+  .proj-card:hover > p { transform: translateZ(32px); }
+  .proj-card:hover > div { transform: translateZ(18px); }
+  @media (prefers-reduced-motion: reduce) { .shimmer { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } .proj-card, .proj-card > * { transition: none; } .proj-card:hover > h5, .proj-card:hover > p, .proj-card:hover > div { transform: none; } }
 
   /* experience timeline */
   .tl { position: relative; margin-top: 38px; padding-left: 52px; }
@@ -480,7 +483,7 @@
         card.addEventListener('pointerenter', function () { r = card.getBoundingClientRect(); });
         card.addEventListener('pointermove', function (e) {
           if (!r) r = card.getBoundingClientRect();
-          var px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5, m = 9;
+          var px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5, m = 13;
           card.style.transform = 'rotateY(' + (px * m) + 'deg) rotateX(' + (-py * m) + 'deg)';
         });
         card.addEventListener('pointerleave', function () { card.style.transform = ''; r = null; });
